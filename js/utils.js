@@ -49,7 +49,7 @@ if(timer3===0){
 	document.querySelector('#result').innerHTML ='Loading Round 3'
    setTimeout(function() {
       if(i===0){
-      window.open('https://ornate-moxie-130802.netlify.app/')
+      window.open('https://sldassignmentround3.netlify.app/')
       }
       i=1;
    }, 5000)
