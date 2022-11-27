@@ -7,22 +7,12 @@ c.fillRect(0, 0, canvas.width , canvas.height)
 
 document.querySelector('#result').style.display= 'flex'
 document.querySelector('#result').innerHTML ='Start Round 2'
-let timer2=2
-let timerId2
-function decreasetimer2(){
-   if(timer2>0) {
-       timerId2=setTimeout(decreasetimer2,1000)
-       timer2--
-       document.querySelector('#timer').innerHTML = timer2
-}
-if(timer2===0){
-	document.querySelector('#result').style.display= 'none'
-	document.querySelector('#result').innerHTML =''
-}
-}
-decreasetimer2();
+var delayInMilliseconds2 = 2000;
+setTimeout(function() {
+    document.querySelector('#result').style.display= 'none'
+	 document.querySelector('#result').innerHTML =''
+  }, delayInMilliseconds2)
 
-let round = 1
 const gravity = 0.8  
 
  const keys ={
@@ -52,7 +42,6 @@ function animate(){
 	window.requestAnimationFrame(animate)
 	c.fillStyle = 'black'
 	c.fillRect(0,0,canvas.width,canvas.height)
-    if (round === 1 ){
 	background.update()
 	player.update()
 	enemy.update()
@@ -134,7 +123,7 @@ function animate(){
 	if (enemy.health<=0 || player.health<=0)
 
 		determineWinner({player,enemy,timerId})
-}}
+}
 
 animate()
 

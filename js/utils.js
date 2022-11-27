@@ -32,3 +32,12 @@ if(timer===0){
 determineWinner({player,enemy,timerId})
 }
 }
+var delayInMilliseconds = 32000;
+setTimeout(function() {
+    document.querySelector('#result').style.display= 'flex'
+	 document.querySelector('#result').innerHTML ='Loading Round 3'
+     var delayInMilliseconds1 = 3000;
+     setTimeout(function() {
+        window.open('')
+     }, delayInMilliseconds1)
+  }, delayInMilliseconds)

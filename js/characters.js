@@ -144,5 +144,5 @@ health: 200
 	 width:250,
 	 height:50
 	},
-	health: 300
+	health: 250
    })
