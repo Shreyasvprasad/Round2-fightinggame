@@ -137,8 +137,10 @@ window.addEventListener('keydown',(event) => {
 	     keys.a.pressed=true
 	  break
 	  case 'w':
-	     player.velocity.y=-20
-		 player.switchsprite('jump')
+		if (player.velocity.y>=0){
+			player.velocity.y=-20
+			player.switchsprite('jump')
+			}
 	  break
 	  case ' ':
 	     player.attack()
@@ -154,7 +156,9 @@ window.addEventListener('keydown',(event) => {
 	     keys.ArrowLeft.pressed=true
 	  break
 	  case 'ArrowUp':
-	     enemy.velocity.y=-20
+		if (enemy.velocity.y>=0){
+			enemy.velocity.y=-20
+		}
 	  break
 	  case 'Enter':
 	     enemy.attack()
