@@ -39,9 +39,9 @@ let timer3=300
 let timerId3
 function decreasetimer3(){
    if(timer3>0) {
-       timerId3=setTimeout(decreasetimer2,1000)
+       timerId3=setTimeout(decreasetimer3,1000)
        timer3--
-       document.querySelector('#timer').innerHTML =timer3
+       document.querySelector('#timer').innerHTML =timer3s
 }
 if(timer3===0){
 	document.querySelector('#result').style.display= 'flex'
